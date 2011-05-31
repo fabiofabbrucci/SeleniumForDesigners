@@ -6,7 +6,7 @@
  */
 class CssConfig{
 	
-	public $code = 'Luisa';
+	public $code = 'SeleniumForDesigners';
 	public $url_local;
 	public $url;
 	public $max_urls = 10;
