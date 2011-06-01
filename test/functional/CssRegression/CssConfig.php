@@ -26,9 +26,9 @@ class CssConfig{
     	if(!$this->code)
     		throw new Exception('Necessario impostare un CODE');
     	$this->url_local = 'http://localhost/'.$this->code.'/';
-		$this->url = 'http://'.$this->code.'/';
+		$this->url = 'http://localhost/'.$this->code.'/';
     	$this->base_url = $this->url_local;
-    	$this->base_path = $this->code . "/test/functional/CssRegression/";
+    	$this->base_path = '/var/www/'.$this->code.'/test/functional/CssRegression/';
     	$this->url_screen = $this->base_url . 'test/functional/CssRegression/';
     }
     

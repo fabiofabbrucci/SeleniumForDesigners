@@ -43,8 +43,10 @@ abstract class PHPUnit_Extensions_DesignerSeleniumTestCase extends PHPUnit_Exten
     
     protected function captureScreenshot(){
     	if(!$screenshotname = $this->getScreenshotname()) $screenshotname = $this->testId;
-    	//echo $this->screenshotPath . "\\" . $screenshotname . '.png';
-		$this->drivers[0]->captureEntirePageScreenshot( $this->screenshotPath . "\\" . $screenshotname . '.png' );
+    	$filename = $this->screenshotPath . "/" . $screenshotname . '.png';
+    	if(!file_exists($this->screenshotPath))
+    		throw new Exception('Doesnt exist folder '.$this->screenshotPath);
+		$this->drivers[0]->captureEntirePageScreenshot( $filename );
 		return 'Screenshot: ' . $this->screenshotUrl . '/' . $screenshotname . ".png\n";
     }
     
