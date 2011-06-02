@@ -28,7 +28,7 @@ class CssConfig{
     	$this->url_local = 'http://localhost/'.$this->code.'/';
 		$this->url = 'http://localhost/'.$this->code.'/';
     	$this->base_url = $this->url_local;
-    	$this->base_path = '/var/www/'.$this->code.'/test/functional/CssRegression/';
+    	$this->base_path = __DIR__.DIRECTORY_SEPARATOR;
     	$this->url_screen = $this->base_url . 'test/functional/CssRegression/';
     }
     
